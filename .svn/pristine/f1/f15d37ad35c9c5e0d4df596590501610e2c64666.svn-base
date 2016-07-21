@@ -1,0 +1,945 @@
+@charset "utf-8";
+/* CSS Document */
+
+#main{margin:0 auto;padding:10px 0 15px;width:980px}
+.page-navbar-w{margin-top:20px;text-align:center;clear:both}
+.page-navbar{display:inline-block;*display:inline;}
+.page-navbar a,.page-navbar span{float:left;margin-left:5px;padding:5px 1px 5px;height:12px;min-width:18px;_width:18px;_zoom:1;border:1px solid #CCC;border-radius:1px;text-decoration:none;text-align:center;color:#EF8337;font:12px/12px arial;position:relative}
+.page-navbar a:hover{text-decoration:none}
+.page-navbar .current{background-color:#FFF3E8;border-color:#EF8337;font-weight:bold;color:#EF8337}
+.page-navbar .tri{;top:6px;font-size:0;line-height:0;width:0;height:0;border:4px dashed transparent;position:absolute}
+.page-navbar .previous,.page-navbar .next{width:40px;padding:5px 4px 5px 10px}
+.page-navbar .next{padding:5px 10px 5px 4px}
+.page-navbar .first-page,.page-navbar .last-page{width:40px}
+.page-navbar .first-page{margin-left:0}
+.page-navbar .previous .tri{left:2px;border-right:4px solid #EF8337}
+.page-navbar .next .tri{right:2px;border-left:4px solid #EF8337}
+.page-navbar .previous .disable{border-right-color:#CCC}
+.page-navbar .next .disable{border-left-color:#CCC}
+.page-navbar span{color:#CCC}
+.page-navbar span.up .tri{border-right-color:#CCC}
+.page-navbar span.down .tri{border-left-color:#CCC}
+.calendar-table{table-layout:fixed;width:100%;border:1px solid #ededed;border-collapse:collapse;border-spacing:0;font-size:14px;color:#222;text-align:center;background-color:#FFF}
+.calendar-table__header .weekday{padding:8px 10px;font-size:12px;background:#FFF;color:#999;text-align:center}
+.calendar-table__body .day{border:1px solid #ededed;color:#ccc}
+.calendar-table__body .day__num{display:inline-block;margin:5px 0;font-size:14px;font-family:Arial;color:#ccc;line-height:1em}
+.calendar-table__body .day__text{display:inline-block;margin:0 0 3px 10px;*margin-bottom:5px;font-size:12px;color:#ccc;line-height:1em}
+.calendar-table__body .day__symbol{display:block;;right:0;bottom:-1px;width:16px;height:16px;background:url(../images/ico-hotel-appoint.ve6badfc2.png) left top no-repeat}
+.calendar-table__body .day__badge{display:block;;left:50%;width:28px;margin-left:-16px;top:0;padding:2px;background:#878787;color:#FFF;font-size:10px;line-height:1em;border-radius:0 0 3px 3px}
+.calendar-table__body .day--cur-month{color:#999}
+.calendar-table__body .day--prev-month,.calendar-table__body .day--next-month{color:#ccc}
+.calendar-table__body .day--selectable{color:#333}
+.calendar-table__body .day--available{background:#fef7e2;border-color:#ece3ca}
+.calendar-table__body .day--available .day__num{font-size:14px;color:#333;text-shadow:1px 1px 1px #FFF}
+.calendar-table__body .day--available .day__text{color:#333;text-shadow:1px 1px 1px #FFF}
+.calendar-table__body .day--today .day__num{font-size:14px}
+.calendar-table__body .day--unavailable,.calendar-table__body .day--unappointable,.calendar-table__body .day--occupied{color:#ccc;background:#FFF;border-color:#ededed}
+.calendar-table__body .day--unavailable .day__num,.calendar-table__body .day--unappointable .day__num,.calendar-table__body .day--occupied .day__num,.calendar-table__body .day--unavailable .day__text,.calendar-table__body .day--unappointable .day__text,.calendar-table__body .day--occupied .day__text{color:#ccc}
+.calendar-table__body .day__wrapper{padding:12px 10px}
+.calendar-table__body .day--today .day__wrapper,.calendar-table__body .day--selected .day__wrapper{}
+.calendar-controls{text-align:center;padding:0;margin-bottom:15px}
+.calendar-control{display:inline-block;vertical-align:middle;background:#00c8c8;color:#FFF;border:1px solid #41aaad;line-height:28px;height:28px;margin:0}
+.calendar-control--display{width:100px;background:#FFF;border-color:#CCC;border-width:1px 0;color:#333;text-align:center;*zoom:1}
+.calendar-control--next,.calendar-control--previous{padding:0 10px;cursor:pointer;font-size:15px;text-decoration:none}
+.calendar-control--next{margin-left:-1px;-webkit-border-radius:0 3px 3px 0;-moz-border-radius:0 3px 3px 0;border-radius:0 3px 3px 0}
+.calendar-control--previous{margin-right:-1px;-webkit-border-radius:3px 0 0 3px;-moz-border-radius:3px 0 0 3px;border-radius:3px 0 0 3px}
+.calendar-control--next:hover,.calendar-control--previous:hover{text-decoration:none}
+.calendar-control--disabled{cursor:not-allowed}
+.deallist-sprite,.brand-tile__cover .multi-icon{background:url(../images/deallist.v503fe7ac.png) no-repeat}
+.deal-tile{float:left;width:350px;border:1px solid #ddd;background:#fff;color:#999}
+.deal-tile:hover .short-title{color:#333}
+.deal-tile .w-link:hover .short-title{_color:#333}
+.deal-tile .num{font-family:arial,sans-serif}
+.deal-tile .deal-mark{top:-4px;left:10px}
+.deal-tile__cover{display:block;_zoom:1;text-decoration:none}
+.deal-tile__cover:hover{text-decoration:none}
+.deal-tile__cover img{display:block}
+.deal-tile__cover .trade-geo{;bottom:0;width:318px;padding:5px 16px;max-height:166px;z-index:5;font-size:12px;line-height:22px;color:#ccc;opacity:0;filter:Alpha(opacity=0);overflow:hidden;background-color:#000;cursor:pointer;text-decoration:none!important;-moz-transition:opacity .5s ease-out;-webkit-transition:opacity .5s ease-out;transition:opacity .5s ease-out}
+.deal-tile__cover .trade-geo em{color:#f76120}
+.deal-tile__cover .geo-hover{opacity:.9;filter:Alpha(opacity=90)}
+.deal-tile__cover .trade-geo:hover{opacity:.9;filter:Alpha(opacity=90)}
+.deal-tile__cover .geo-title{font-weight:bold}
+.deal-tile__cover .geo-title__icon{display:inline-block;width:13px;height:13px;padding-right:2px;vertical-align:-2px;*vertical-align:baseline;background:url(../images/sp-icons-24.v93f4adf7.png) 0 0 no-repeat;_background:url(../images/sp-icons.vbfce69f2.png) 0 0 no-repeat}
+.deal-tile__cover .deal-st{;top:0;left:0;width:350px;height:214px;text-indent:-999px;overflow:hidden;background:url(../images/bg-deal-status-24.vbcc1df64.png) 0 0 no-repeat;_background-image:url(../images/bg-deal-status.vbfd0be9c.png)}
+.deal-tile__cover .deal-st--expire{background-position:0 -224px}
+.deal-tile__title .w-link{display:block;height:64px;overflow:hidden;_cursor:pointer;-moz-transition:color .2s;-webkit-transition:color .2s;transition:color .2s}
+.deal-tile__title .w-link:hover{text-decoration:none}
+.deal-tile__title .xtitle,.deal-tile__title .short-title{display:block;-webkit-transition:color .2s;-moz-transition:color .2s;transition:color .2s}
+.deal-tile__title .xtitle{margin-bottom:4px;color:#333;font-size:16px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-indent:-0.5em;_width:306px}
+.deal-tile__title em{font-weight:inherit;color:#f76120}
+
+.deal-tile__detail .price{margin-right:10px;font-size:26px;color:#f76120}
+.deal-tile__detail .price strong{margin-left:2px}
+.deal-tile__detail .price .price-label--wedding{font-size:16px;margin-right:6px}
+.deal-tile__detail .num{font-family:arial,sans-serif}
+.deal-tile__detail .value{font-size:12px}
+.deal-tile__detail .value del,.deal-tile__detail .value .num--wedding{padding-left:6px}
+.deal-tile__extra{padding:1px;border-top:1px #f3f3f3 solid}
+.deal-tile__extra .extra-inner{height:33px;padding:0 15px;font-size:12px;background-color:#fafafa}
+.deal-tile__extra .sales{float:left;height:33px;line-height:33px}
+.deal-tile__extra .sales .num{margin-left:2px;color:#f76120;font-weight:normal}
+.deal-tile__extra .rate-info{float:right;height:33px;line-height:33px;cursor:pointer}
+.deal-tile__extra .rate-info:hover,.deal-tile__extra .rate-info:hover .rate-info__count{color:#EF8337;text-decoration:none}
+.deal-tile__extra .rate-info__bar{margin-right:5px;*margin-right:8px;vertical-align:-1px;*vertical-align:1px}
+.deal-tile__extra .rate-info__count{display:inline-block;color:#949494}
+.deal-tile__extra .rate-info--noreviews{cursor:default}
+.deal-tile__extra .rate-info--noreviews:hover{color:inherit}
+.deal-tile__extra .marker{float:right;top:10px;width:10px;height:13px;overflow:hidden}
+.deal-tile__extra .maker--distance{background-position:-54px -77px}
+.deal-tile__extra .sp-around-icon{background-position:0 -62px}
+.deal-tile__extra .subway-distance,.deal-tile__extra .around-distance{float:right;padding-left:5px;font-size:12px;line-height:33px}
+.deal-tile__extra .around-distance em{padding:0 3px;font-weight:bold;color:#fd6b44}
+.deal-mark{position:absolute;z-index:9}
+.deal-mark__item{float:left;_margin-right:-3px;width:43px;height:40px;background:url(../images/newicon.png) no-repeat;text-indent:-9999px;overflow:hidden}
+.deal-mark__item--new{background-position:0 -150px}
+.deal-mark__item--pois{background-position:-44px -150px}
+.deal-mark__item--nnbooking{background-position:-132px -150px}
+.deal-mark__item--appoint{background-position:-88px -193px}
+.deal-mark__item--imax{background-position:-176px -150px}
+.deal-mark__item--ndhotel{background-position:0 -193px}
+.deal-mark__item--lottery{background-position:-44px -193px}
+.deal-mark__item--weddingexclusive{background-position:0 -355px}
+.deal-mark__item--weddinginsurance{background-position:-44px -355px}
+.brand-tile{float:left;width:350px;border:1px solid #ddd;background:#fff;color:#666}
+.brand-tile .logo{margin:20px auto}
+.brand-tile .title{display:block;text-align:center;font-weight:bold;color:#666}
+.brand-tile--even{margin-right:0}
+.brand-tile__cover{display:block;padding-bottom:20px;border-bottom:1px solid #ddd;text-align:center}
+.brand-tile__cover img{display:block;max-width:314px}
+.brand-tile__cover img:first-child{border-bottom:1px solid #f1f1f1}
+.brand-tile__cover .multi-icon{;width:50px;height:50px;left:0;top:192px;background-position:0 0}
+.brand-tile__cover:hover{text-decoration:none}
+.brand-tile__extra{display:block;border-top:1px solid #fff;margin-bottom:1px;padding:10px 0;text-align:center;font-size:12px;background-color:#fafafa}
+.brand-tile__extra .extra-inner{width:33%;float:left;border-right:1px dotted #ddd}
+.brand-tile__extra .count{font-size:18px;font-family:arial;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.brand-tile__extra .label{color:#999}
+.brand-tile__extra .extra-inner--last{border-right:0}
+.deal-tile--reco{border:0;width:198px;height:195px;font-size:12px}
+.deal-tile--reco:hover{box-shadow:none}
+.deal-tile--reco .w-link{width:198px;height:36px}
+.deal-tile--reco .w-link:hover .short-title{color:#EF8337}
+.deal-tile--reco .price{font-size:22px}
+
+.mall{*float:left;width:720px;clear:left}
+.mall .brand-tile,.mall .deal-tile{margin-bottom:16px;box-shadow:0 2px 0 0 #ededed}
+.mall .brand-tile:hover,.mall .deal-tile:hover{border-bottom-color:#2eb6aa;box-shadow:inset 0 -1px 0 0 #2eb6aa}
+.mall .deal-tile--even{float:right}.mall .page-nav-wrapper{clear:both;padding-top:20px;text-align:center}
+.pg-nav .page-nav-wrapper{padding-top:24px}
+.mall--3cols{width:980px}
+.mall--3cols .deal-tile,.mall--3cols .brand-tile{margin:0 16px 16px 0;width:314px}
+.mall--3cols .brand-tile--even,.mall--3cols .deal-tile--even{float:left;margin-right:0}
+.mall--3cols .deal-tile__cover .trade-geo{width:282px}
+.mall--3cols .deal-tile__cover .deal-st{width:314px;height:192px;background-position:-18px -11px}
+.mall--3cols .deal-tile__cover .deal-st--expire{background-position:-18px -235px}
+.mall--3cols .deal-tile__title .xtitle{_width:282px}
+.mall--3cols .deal-tile__detail{padding:4px 16px}
+.mall--3cols .deal-tile__detail .price{font-size:22px}
+#deal-other-biz{margin:0 0 20px;background-color:#FFF}
+#deal-other-biz h3{border-bottom:2px solid #babdc2;padding-bottom:5px;margin-bottom:5px}
+#deal-other-biz .item-list a{border:1px solid #eee;box-shadow: 0 1px 0 0 #EDEDED;display:block;padding:0 5px;height:36px;line-height:36px;font-size:12px;}
+#deal-other-biz .item-list a:hover{background:#fff;text-decoration:none;color:#EF8337;}
+#deal-other-biz .item-list a:hover .value,#deal-other-biz .item-list a:hover .value-cn,#deal-other-biz .item-list a:hover .biz-title,#deal-other-biz .item-list a:hover .sale{color:#EF8337}
+#deal-other-biz .item-list .money{display:inline-block;min-width:115px;_width:130px;height:36px;vertical-align:top;cursor:pointer}
+#deal-other-biz .item-list .price{margin-right:10px;font-size:14px;font-family:arial,sans-serif;color:#c33333}
+#deal-other-biz .item-list .value{color:#999;font-family:arial,sans-serif}
+#deal-other-biz .item-list .value-cn{color:#999}
+#deal-other-biz .item-list .biz-title{display:inline-block;width:400px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:#666;cursor:pointer}
+#deal-other-biz .item-list .sale{float:right;margin-left:15px;color:#999;cursor:pointer}
+#deal-combine-recommend{margin-bottom:30px;border:1px solid #eee}
+#deal-combine-recommend a{text-decoration:none}
+#deal-combine-recommend h3{padding:8px 0 8px 15px;border-bottom:1px solid #eee;color:#333}
+#deal-combine-recommend h4{font-size:12px;color:#666}
+#deal-combine-recommend .combine{height:204px;padding:18px 0 20px 12px}
+#deal-combine-recommend .deal{float:left;width:208px}
+#deal-combine-recommend .deal__detail h5{font-weight:normal}
+#deal-combine-recommend .deal__detail__link{display:block;zoom:1}
+#deal-combine-recommend .deal__detail__link img{display:block}
+#deal-combine-recommend .deal__detail__title{display:block;width:210px;margin:8px 0;font-size:12px;color:#666;text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
+#deal-combine-recommend .recommend-description{;bottom:0;left:0;width:189px;padding:10px;height:106px;z-index:1;font-size:12px;line-height:16px;color:#666;opacity:0;filter:Alpha(opacity=0);overflow:hidden;background-color:#fafafa;cursor:pointer;text-decoration:none!important;-moz-transition:opacity .5s ease-out;-webkit-transition:opacity .5s ease-out;transition:opacity .5s ease-out}
+#deal-combine-recommend .description-hover{opacity:.95;filter:Alpha(opacity=90)}
+#deal-combine-recommend .description__position{display:block;;width:188px;top:50px;left:10px}
+#deal-combine-recommend .score-info{;bottom:10px;left:10px}
+#deal-combine-recommend .rating-16x16{margin-right:10px}
+#deal-combine-recommend .score-info strong{font-size:18px;color:#f76120}
+#deal-combine-recommend .deal__detail{margin:15px 0 14px 0}
+#deal-combine-recommend .deal__detail .price{display:block;padding-left:5px;font:bold 16px/16px arial,sans-serif;color:#666}
+#deal-combine-recommend .connect{float:left;width:110px;border-bottom:1px dashed #999;padding:70px 6px 10px 6px;font-size:12px;color:#999;text-align:center}
+.pg-deal #deal-recommend-distance .content{padding:8px 0 8px 40px;color:#666;background-color:#FFF}
+.pg-deal #deal-recommend-distance i{;top:0;left:0;width:40px;height:50px;background:url(../images/deal-recommend.v9c25470f.png) -25px 0 no-repeat}
+#deal-combine-recommend .connect__icon{;top:110px;left:60px;width:16px;height:16px;background:url(../images/deal-recommend.v9c25470f.png) 0 0 no-repeat}
+#deal-combine-recommend .connect span{color:#f76120}
+#deal-combine-recommend .connect strong{font-size:24px}
+#deal-combine-recommend .get-next{;top:15px;left:476px;z-index:5}
+#deal-combine-recommend .get-next__icon{display:inline-block;width:14px;height:10px;margin-left:2px;background:url(../images/deal-recommend.v9c25470f.png) 0 -17px no-repeat}
+#deal-combine-recommend .mt-slider-sheet-container{height:220px}
+#deal-combine-recommend .combine-nav-line{;width:3px;height:242px;top:0;right:140px;border-left:1px solid #EEE}
+#deal-combine-recommend .buy{;top:100px;right:24px}
+#deal-combine-recommend .buy__price{;top:50px;left:380px;color:#f76120;font-size:20px;font-weight:bold}
+#deal-mtsaid{margin-top:10px;clear:both;border:2px solid #89b4d4;background:#fff}
+#deal-mtsaid h2{height:49px;border-bottom:1px dashed #dbecf5;text-indent:-9999px;background:url(../images/bg-mtsaid.v482cc843.png) 0 0 no-repeat}
+#deal-mtsaid div.content{float:left;width:560px;word-wrap:break-word;padding:15px 0 15px 15px;overflow:hidden}
+#deal-mtsaid div.content p{margin:10px 0 15px}
+#deal-mtsaid div.content img{display:block}
+#deal-mtsaid div.content .voice-share{padding:4px 6px;margin-bottom:10px}
+#deal-mtsaid div.content .voice-share li{float:left;font-size:12px}
+#deal-mtsaid div.content .voice-share a{padding:3px 0 3px 20px;margin-right:12px;background:url(../images/icons-share.v186f5c42.gif) 0 -200px no-repeat}
+#deal-mtsaid div.content .voice-share a.qq{background-position:0 -277px}
+#deal-mtsaid div.side{float:right;width:128px;padding:0;margin:15px 10px 15px 0;text-align:center}
+#deal-intro .digest{margin-top:28px;margin-left:10px;min-height:70px;_height:70px;padding-left:70px;padding-right:35px;background:url(../images/bg-deal-voice-quote.v2a11efc0.gif) no-repeat 0 0;color:#666}
+#deal-intro{margin-bottom:10px;padding:15px 15px 0 15px;border:1px solid #d4d4d4;border-bottom:1px solid #dbd7d6;border-bottom-left-radius:3px;border-bottom-right-radius:3px;-moz-box-shadow:0 1px 1px #ccdee0;-webkit-box-shadow:0 1px 1px #ccdee0;box-shadow:0 1px 1px #ccdee0;background:#fff;clear:both}
+#deal-intro h1{padding:0 20px 20px;font-size:24px;line-height:1.4;font-family:'Microsoft Yahei','黑体',Tahoma,Helvetica,arial,sans-serif;color:#333}
+#deal-intro .deal-brand{padding:9px 20px 5px 0;font:normal bold 28px/1.4 'Microsoft Yahei','黑体',Tahoma,Helvetica,arial,sans-serif;color:#000}
+#deal-intro .deal-brand h1{display:inline;padding:0;font-size:28px}
+#deal-intro h2.deal-title{padding:0 20px 20px 9px;font-size:20px;line-height:1.4;font-family:'Microsoft Yahei','黑体',Tahoma,Helvetica,arial,sans-serif;color:#777}
+#deal-intro .deal-title__tip{color:red;font-size:18px}
+#deal-intro .main{float:left;margin-bottom:16px;padding-top:63px;width:210px;_display:inline;background:#f4f4f4;font-family:Helvetica,arial,sans-serif}
+#deal-intro .deal-discount{;top:0;left:-7px;padding:0 0 7px 15px;*padding-top:6px;width:202px;height:56px;*height:50px;font-size:34px;font-family:arial,sans-serif;color:#fff;z-index:1;background:url(../images/sp-deal-intro-24.v94ba68dd.png) 0 0;_background:url(../images/sp-deal-intro.v8d90c0cf.png) 0 0}
+#deal-intro .deal-discount .price{line-height:56px}
+#deal-intro .deal-discount .symbol-RMB{margin-right:-4px;font-size:smaller}
+#deal-intro .deal-discount .digits4{font-size:28px}
+#deal-intro .deal-discount .digits5{font-size:26px}
+#deal-intro .deal-discount .digits6{font-size:22px}
+#deal-intro .deal-discount .original{margin-left:5px;font-size:12px;line-height:18px;*zoom:1}
+#deal-intro .deal-discount .discount-price{font-weight:bold;text-decoration:line-through;text-decoration:#C00 solid line-through}
+#deal-intro .deal-discount .discount-text{;width:44px;height:23px;top:-31px;right:0;background:url(../images/sp-deal-intro-24.v94ba68dd.png) 0 -310px no-repeat;_background:url(../images/sp-deal-intro.v8d90c0cf.png) 0 -310px no-repeat;text-align:center}
+.deal-scheme{padding:10px 6px;border-bottom:1px solid #e3e3e3;text-align:left}
+.deal-scheme__item{float:left;width:83px;padding:5px;margin:1px 5px 5px 0;border:1px solid #d2d2d2;color:#676767;background:#FFF;text-decoration:none;text-align:center;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;_zoom:1}
+.deal-scheme__item--r{margin-right:0}
+.deal-scheme__item--current i{;width:10px;height:10px;bottom:0;right:0;_top:18px;_right:-1px;background:url(../images/sp-deal-intro-24.v94ba68dd.png) no-repeat 0 -384px;_background:url(../images/sp-deal-intro.v8d90c0cf.png) no-repeat 0 -384px}
+.deal-scheme__item--current,.deal-scheme__item:hover{width:81px;margin-top:0;margin-bottom:4px;border-width:2px;border-color:#2eb6aa;text-decoration:none}
+#deal-intro .main .deal-info{background:#f4f4f4;border:1px solid #e4e4e4;border-width:0 0 1px 1px;font-size:12px;font-family:arial,Tahoma,sans-serif,Tahoma,sans-serif;color:#666;text-align:center}
+#deal-intro .main .deal-buy{height:40px;padding:12px 3px 17px 6px;border-bottom:1px solid #e3e3e3;font-size:16px;text-align:center}
+#deal-intro .deal-info--withscheme .deal-buy{padding-top:17px;border-top:1px solid #FFF}
+#deal-intro .main .deal-info .op-single{padding-left:53px;padding-right:54px}
+#deal-intro .main .deal-buy a,#deal-intro .main .deal-buy .pending,#deal-intro .main .deal-buy .over{float:left;width:88px;height:40px;background:url(../images/sp-deal-intro-24.v94ba68dd.png) 0 -64px no-repeat;_background:url(../images/sp-deal-intro.v8d90c0cf.png) 0 -64px no-repeat;text-indent:-9999em;outline:0}
+#deal-intro .main .deal-info .op-single a,#deal-intro .main .deal-info .op-single .pending,#deal-intro .main .deal-info .op-single .over{width:100px}
+#deal-intro .main .deal-buy .cart{float:right;width:100px;background-position:0 -228px}
+#deal-intro .main .deal-buy .cart:hover{background-position:0 -269px}
+#deal-intro .main .deal-buy--open a:hover{background-position:0 -105px}
+#deal-intro .main .deal-buy--pending .pending{background-position:-201px -146px}
+#deal-intro .main .deal-buy--lottery a{background-position:-89px -64px}
+#deal-intro .main .deal-buy--lottery--goldphone a{background-position:-190px -64px}
+#deal-intro .main .deal-buy--lottery--goldphone a:hover{background-position:-190px -105px}
+#deal-intro .main .deal-buy--lottery a:hover{background-position:-89px -105px}
+#deal-intro .main .deal-buy--expired .over{background-position:0 -146px}
+#deal-intro .main .deal-buy--soldout .over{background-position:0 -187px}
+#deal-intro .main .deal-buy--mobileonly a{background-position:-101px -146px}
+#deal-intro .main .deal-buy--mobileonly a:hover{background-position:-101px -187px}
+#deal-intro .main .deal-status{padding:11px 5px;border-top:1px solid #fbfbfb;border-bottom:1px solid #e3e3e3;height:53px;text-align:center;color:#666;zoom:1}
+#deal-intro .main .deal-info-last{border-bottom:0;padding:46px 5px}
+#deal-intro .main .deal-status .deal-status-time-left strong{margin:0 2px}
+#deal-intro .main .deal-status .deal-status-count{font-size:18px;line-height:30px}
+#deal-intro .main .deal-status .deal-status-count strong{margin:0 2px;color:#ee5239}
+#deal-intro .main .deal-status .deal-status-count .current-buy-number{margin-left:0}
+#deal-intro .main .deal-status .digit-size-L{font-size:16px}
+#deal-intro .main .deal-status .digit-size-M{font-size:14px}
+#deal-intro .main .deal-status .digit-size-S{font-size:12px}
+#deal-intro .main .consumer-protection{overflow:hidden;zoom:1}
+#deal-intro .main .consumer-protection .protect-item{float:left;padding:8px 0;height:52px;border-top:1px solid #fbfbfb}
+#deal-intro .main .protect-item__icon{display:block;margin:0 35px 5px;width:32px;height:28px;background:url(../images/sp-consumer-protection-icons.vdaafc28b.png) 0 0 no-repeat;cursor:pointer;zoom:1}#deal-intro .main .protect-item__link{display:block;line-height:14px;color:#099;text-align:center}
+#deal-intro .main .protect-item__link:hover{text-decoration:none}
+#deal-intro .main .protect-item--quality,#deal-intro .main .protect-item--no-quality,#deal-intro .main .protect-item--anytime,#deal-intro .main .protect-item--no-anytime{border-right:1px solid #e4e4e4;width:102px}
+#deal-intro .main .protect-item--seven,#deal-intro .main .protect-item--no-seven,#deal-intro .main .protect-item--expire,#deal-intro .main .protect-item--no-expire{border-left:1px solid #fafafa;width:102px}
+#deal-intro .main .protect-item--seven,#deal-intro .main .protect-item--no-seven,#deal-intro .main .protect-item--expire,#deal-intro .main .protect-item--no-expire{border-left:1px solid #fafafa;width:102px}
+#deal-intro .main .protect-item--no-anytime .protect-item__link,#deal-intro .main .protect-item--no-expire .protect-item__link,#deal-intro .main .protect-item--no-seven .protect-item__link{color:#999}
+#deal-intro .main .protect-item--anytime .protect-item__icon{background-position:2px 0}
+#deal-intro .main .protect-item--expire .protect-item__icon{background-position:3px -30px}
+
+#deal-intro .main .protect-item--seven .protect-item__icon{background-position:2px -60px
+}#deal-intro .main .protect-item--quality .protect-item__icon{background-position:2px -90px}
+#deal-intro .main .protect-item--no-anytime .protect-item__icon{background-position:0 -120px}
+#deal-intro .main .protect-item--no-expire .protect-item__icon{background-position:0 -150px}
+#deal-intro .main .protect-item--no-seven .protect-item__icon{background-position:0 -180px}
+#deal-intro .main .protect-item--topspeed .protect-item__icon{background-position:3px -210px}
+#deal-intro .main .consumer-protection--hastopspeed .protect-item{width:68px;overflow:hidden}
+#deal-intro .main .consumer-protection--hastopspeed .protect-item--topspeed{width:68px;border-right:1px solid #e4e4e4;border-left:1px solid #fafafa}
+#deal-intro .main .consumer-protection--hastopspeed .protect-item__link{text-align:center}
+#deal-intro .main .consumer-protection--hastopspeed .protect-item__icon{margin:0 20px 5px}
+#deal-intro .deal-buy-cover-img{float:left;margin-bottom:16px;font-size:0;box-shadow:-3px 1px 1px -1px #e0e0e0}
+#deal-intro .deal-mark{top:-4px;right:4px}
+#deal-intro .deal-preference{margin:16px -15px 1px;padding:3px 17px;width:666px;border-top:1px solid #d4d4d4;background-color:#f4f4f4;font-size:12px;color:#333;clear:left}
+#deal-intro .preference-bar{height:30px}
+#deal-intro .in-favorite{line-height:30px;text-decoration:none;color:#666;cursor:default}
+#deal-intro .add-favorite{display:inline-block;padding-left:18px;_padding:9px 0 9px 18px;line-height:30px;text-decoration:none;color:#333}
+#deal-intro .add-favorite i{display:inline-block;margin:0 5px 0 -18px;width:13px;height:12px;background:url(../images/sp-deal.v0935a050.png) -80px 0 no-repeat;vertical-align:-2px;*vertical-align:-1px;*zoom:1}
+#add-favorite-dialog{border:0}
+.favorite-dialog__container{border:1px solid #10a6a6;padding:15px;text-align:center;background:#FFF}
+.favorite-dialog__mask{;top:-3px;left:-3px;right:-3px;bottom:-3px;background-color:#000;opacity:.12;filter:alpha(opacity=12);z-index:-1}
+.favorite-dialog__close{display:block;;top:5px;right:5px;background:url(../images/dialog-close.v9f43683b.png);height:10px;width:10px;cursor:pointer}
+.favorite-dialog__title{vertical-align:middle;font-weight:bold}
+.favorite-dialog__success{display:inline-block;vertical-align:middle;background:url(../images/sys-icons-16.vd2db5315.png);height:16px;width:16px;margin-right:3px}
+.favorite-dialog__content{font-size:12px}
+#deal-intro .deal-share{float:right;*width:500px;height:30px}
+#deal-intro .deal-share a span{display:none}
+#deal-intro .deal-share .share-tip{float:right;margin:7px 0;line-height:16px;color:#333}
+#deal-intro .deal-share .icon-new{top:-9px;right:-5px}
+#deal-intro .deal-share ul{float:right;padding:7px 0;height:16px}
+#deal-intro .deal-share li{float:left;margin-left:8px;_display:inline}
+#deal-intro .deal-share-im-content{float:none;margin:10px 0;padding:0;width:100%}
+#deal-intro .deal-share-im-content h5{margin-bottom:5px}
+#deal-intro .deal-share-im-content .btn-mini{margin:0 0 1px 10px}
+#deal-intro .deal-share-im-content .f-input{width:280px;vertical-align:bottom}
+#deal-intro .deal-share-im-content .collapse{;top:4px;right:0}
+#deal-intro .effect-assistance{float:none;width:100%}
+.poi-wrapper{margin-bottom:10px;padding:20px 15px 0;border-bottom:1px solid #eee;font-size:12px;line-height:21px;color:#333}
+.poi-wrapper h5{font-size:14px}
+.poi-wrapper p{word-wrap:break-word;word-break:break-all}
+.poi-wrapper .grade{margin-top:13px;width:80px;height:15px;background:url(../images/bg-business-grade.v241a614a.png) no-repeat 0 0}
+.poi-wrapper .g45{background-position:0 -100px}
+.poi-wrapper .g40{background-position:0 -200px}
+.poi-wrapper .g35{background-position:0 -300px}
+.poi-wrapper .g30{background-position:0 -400px}
+.poi-wrapper .range{padding:5px 7px;border:1px solid #e0e0e0;border-left-color:#FFF;color:#666;font-size:12px;text-decoration:none}
+.poi-wrapper .first-range{border-left-color:#e0e0e0}
+.poi-wrapper .current-range{border:1px solid #0bab9e;color:#FFF;background-color:#2eb6aa}
+.poi-wrapper .biz-wrapper{float:left;width:307px;padding-bottom:50px;min-height:253px;_height:253px;zoom:1}
+.poi-wrapper .biz-filter-wrapper{height:37px;padding-top:0}
+.poi-wrapper .biz-wrapper-nobottom{padding-bottom:0}
+.poi-wrapper .biz-filter{width:80px;margin-right:8px;font-size:12px;vertical-align:top;zoom:1}
+.poi-wrapper .biz-filter-title{margin-right:8px;font-size:12px;line-height:20px;vertical-align:top;zoom:1}
+.poi-wrapper .map-loading-mask{;left:0;top:0;width:310px;height:221px;filter:alpha(opacity=50);opacity:.5;background:url(../images/icon-loading16x16.vecf78228.gif) no-repeat center center;background-color:#f4f4f4}
+.poi-wrapper .biz-info{width:297px;padding-left:10px;border-bottom:1px solid #eee}
+.poi-wrapper .biz-info--first{border-top:1px solid #eee}
+.poi-wrapper .biz-info__level{line-height:20px;height:20px;padding:4px 0 6px;color:#333}
+.poi-wrapper .biz-info__level .common-rating--biz{width:70px;margin-top:5px;_margin-top:2px}
+.poi-wrapper .biz-info__score{color:#fd1113;font-weight:bold}
+.poi-wrapper .biz-info__text{color:#999}
+.poi-wrapper .biz-info__link:hover{text-decoration:none}
+.poi-wrapper .biz-info__title{height:36px;padding-right:15px;line-height:36px}
+.poi-wrapper .biz-info__content{display:none}
+.poi-wrapper .biz-info__content .biz-item{width:297px;line-height:20px;color:#666}
+.poi-wrapper .biz-info__content .biz-tip{color:red}
+.poi-wrapper .biz-info__content .link-item{width:261px;}
+.common-rating, .common-rating .rate-stars{background-image:url(../images/index.png) no-repeat;}
+.poi-wrapper .biz-info__content .title-label{color:#333}
+.poi-wrapper .biz-info__title .down-arrow{;right:5px;top:15px;width:12px;height:8px;background:url(../images/sp-common.v60632a81.png) 0 -68px}
+.poi-wrapper .biz-info--open{min-height:167px;_height:167px;padding-bottom:10px}
+.poi-wrapper .biz-info--open .down-arrow{display:none}
+.poi-wrapper .biz-info--open .biz-info__content{display:block}
+.poi-wrapper .biz-info--only{border:0;background-color:transparent}
+.poi-wrapper .biz-info--only .biz-item{line-height:24px}
+.poi-wrapper .biz-info__content .field-group{width:251px;margin-bottom:0}
+.poi-wrapper .biz-info__rate-count{padding-left:4px;color:#EF8337}
+.poi-wrapper .field-group label{top:0;width:3em;padding:0;font-size:12px}
+.poi-wrapper .deal-biz{;bottom:17px;right:0;font-size:12px;min-width:140px;text-align:right;_width:140px}
+.poi-wrapper .deal-biz:hover{text-decoration:none}
+.poi-wrapper .page-nav{;left:0;bottom:20px}
+.poi-wrapper .page-nav a,.poi-wrapper .page-nav span{padding:0;float:left;margin-left:5px;width:20px;height:20px;text-align:center;text-decoration:none;border:1px solid #CCC;border-radius:1px;color:#EF8337;font:12px/12px arial;line-height:20px}
+.poi-wrapper .page-nav a:hover{text-decoration:none}
+.poi-wrapper .page-nav .next,.poi-wrapper .page-nav .previous{text-indent:-99999px}
+.poi-wrapper .page-nav .tri{bottom:6px}
+.poi-wrapper .page-nav .previous .tri{left:4px;border-right:4px solid #EF8337}
+.poi-wrapper .page-nav .next .tri{right:4px;border-left:3px solid #EF8337}
+.poi-wrapper .page-nav .next .disable{border-left-color:#CCC}
+.poi-wrapper .page-nav .previous .disable{border-right-color:#CCC}
+.poi-wrapper .page-nav .current{background-color:#edfffe;border-color:#badfde;color:#EF8337}
+.poi-wrapper .poi-link{font-size:14px;font-weight:bold}
+.poi-wrapper .poi-link:hover{text-decoration:none}
+.poi-wrapper .left-content{float:left;margin-right:20px;min-height:273px;_height:273px}
+.poi-wrapper .website{text-align:center;padding-bottom:10px}
+.poi-wrapper .mapbody{width:310px;border:1px solid #e0e0e0;zoom:1}
+.poi-wrapper .mapbody a{display:block}
+.poi-wrapper .mapbody img{display:block}
+.poi-wrapper .mapbody .link{width:310px;height:30px;_height:15px;_padding:7px 0;background:#FFF;line-height:30px;color:#666;text-align:center;text-decoration:none}
+.poi-wrapper .mapbody .view-map-icon{padding:7px;background:url(../images/sp-common.v60632a81.png) 0 -48px;line-height:0;font-size:0;vertical-align:middle;zoom:1}
+.poi-wrapper #map-canvas{width:310px;height:221px;background:#e5e3df;overflow:hidden}
+.poi-wrapper #map-canvas a{display:inline}
+.poi-wrapper .address-list .subway-distance{zoom:1}
+.poi-wrapper .view-map{margin-right:1em}
+.poi-wrapper .correct-poi{color:#888}
+.poi-wrapper .mobile{margin:21px 0;padding:21px 0;border-top:1px solid #e9e9e9;border-bottom:1px solid #e0e6e4}
+.poi-wrapper .mobile h5{color:#666}
+.poi-wrapper #lottery-promotion{margin:0 0 30px;border:1px solid #d3e6f6;padding-left:5px;background:#f7fafe}
+.poi-wrapper #lottery-promotion h2{padding:0;margin:5px 0}
+.poi-wrapper #lottery-promotion ul{background:url(../images/bg-lottery-promotion.v71ccc838.png) no-repeat;height:67px}
+.poi-wrapper #lottery-promotion li{width:59px;height:62px;margin-right:5px;float:left;text-indent:-9999px}
+.poi-wrapper #lottery-promotion li.blog{margin:0}
+.poi-wrapper #lottery-promotion li a{display:block;width:100%;height:100%;outline:0}
+#correct-poi-dialog .body{padding:16px 30px}
+#correct-poi-dialog .body h1{margin-bottom:15px;font-size:18px}
+#correct-poi-dialog .field-group{margin-bottom:0;padding:3px 0 18px 70px}
+#correct-poi-dialog .field-group label{width:70px;text-align:left}
+#correct-poi-dialog .field-group .error-type{position:static;margin:0 15px 0 2px}
+#correct-poi-dialog .correct-group{width:268px;margin-left:0;margin-top:10px;padding:5px 10px 5px 90px;background:#ededed}
+#correct-poi-dialog .correct-group input{width:256px;height:15px;vertical-align:middle}
+#correct-poi-dialog .correct-group label{left:10px;width:75px;font-size:12px;text-align:left}
+#correct-poi-dialog .operate{margin-top:5px}
+#correct-poi-dialog .f-textarea{margin-bottom:0;width:356px}
+#correct-poi-dialog .btn-normal{margin-left:20px;vertical-align:top}
+#correct-poi-dialog .result-box{width:140px}
+#correct-poi-dialog .link-for-biz{font-size:12px}
+#correct-poi-dialog .link-for-biz span{color:#999}
+.pg-deal-default .flat-content-navbar{box-shadow:inset 0 0 0 1px #ddd;border:1px solid #eee \9;height:41px;line-height:41px;background-color:#f5f5f5;width:702px;-webkit-transition:width .4s;-moz-transition:width .4s;transition:width .4s;-webkit-transform:translatez(0);-moz-transform:translatez(0);transform:translatez(0)}
+.pg-deal-default .flat-content-navbar.common-fixed{border-top:2px solid #27c6b8;position:fixed;_;width:980px;top:0;z-index:2}
+.pg-deal-default{}
+#J-content-navbar{background-color:#F5F5F5;box-shadow:0 0 0 1px #ddd inset;height?:41px;position:relative;transform:translateZ(0px);transition:width 0.4s ease 0s;width:720px}
+.pg-deal-default .content-navbar__item--current{background-color:#EF8337}
+.pg-deal-default .flat-content-navbar li{float:left;width:139px;text-align:center;border-right:1px solid #eee}
+.pg-deal-default .flat-content-navbar li:last-child{border-right:0}
+.pg-deal-default .flat-content-navbar a{color:#666;display:block;}
+.pg-deal-default .flat-content-navbar a:hover{text-decoration:none}
+.pg-deal-default .content-navbar__item--current a{color:white;font-weight:bold;text-decoration:none}
+.pg-deal-default .content-navbar{width:auto;height:41px;background-image:none;border:1px solid #ddd}
+.pg-deal-default .flat-content-navbar .num{margin-left:3px;color:#999;font-size:10px;line-height:37px}
+.pg-deal-default .content-navbar__item--current .num{color:white}
+.pg-deal-default .flat-content-navbar .icon-new{top:0}
+.pg-deal-default .tip-appointment{;top:-24px;left:9px;width:67px;height:23px;background:url(../images/sp-deal.v0935a050.png) 0 -16px no-repeat}
+.pg-deal-default .buy-group{;right:0;top:7px}
+.pg-deal-default .flat-content-navbar .contact_service--btn{float:left;color:white;background-position:0 2px}
+.pg-deal-default .flat-content-navbar .cart,.pg-deal-default .flat-content-navbar .buy{float:left;width:55px;height:25px;margin-right:10px;background:url(../images/sp-deal-intro-24.v94ba68dd.png) 0 -334px no-repeat;_background:url(../images/sp-deal-intro.v8d90c0cf.png) 0 -332px no-repeat;text-indent:-9999em;outline:0}
+.pg-deal-default .buy-group .buy:hover{background-position:0 -359px;_background-position-y:-357px}
+.pg-deal-default .buy-group .cart{width:101px;background-position:-55px -334px;_background-position-y:-332px}
+.pg-deal-default .flat-content-navbar .cart:hover{background-position:-55px -359px;_background-position-y:-357px}
+.pg-deal-default .content-navbar.common-fixed{position:fixed;width:980px;_;top:0;z-index:2;background-position:0 -48px}
+#deal-stuff{margin-bottom:10px}
+#deal-stuff .standard-content{padding:2px 15px}
+#deal-stuff .box-content{background-color:#eff6fe}
+#deal-stuff .main{margin:0;word-wrap:break-word}
+#deal-stuff .side{float:right;width:198px;padding:15px}
+#deal-stuff .main h2{font-size:16px;border:0}
+#deal-stuff .side h2{font-size:14px;border:0;margin:0}
+#deal-stuff .deal-price strong{float:left;color:#fff;font-size:250%}
+#deal-stuff .deal-buy-bottom{clear:both;font-weight:bold;padding:22px 10px;*zoom:1;background-color:#fafafa;border-top:1px solid #f1f0f0}
+#deal-stuff .deal-buy-bottom .buy-bottom-text{font-size:12px}
+#deal-stuff .deal-buy-bottom .price{float:left;font-size:36px;line-height:40px;color:#f76120}
+#deal-stuff .deal-buy-bottom .btn-wrapper{float:right}
+#deal-stuff .deal-buy-bottom a,#deal-stuff .deal-buy-bottom .over{display:inline-block;*display:block;*float:left;width:88px;height:40px;background:url("../images/deal.png") 0 -64px no-repeat;outline:0;text-indent:-9999em}
+#deal-stuff .deal-buy-bottom a:hover{background-position:0 -105px}
+#deal-stuff .deal-buy-bottom .over{width:100px;background-position:0 -187px}
+#deal-stuff .deal-buy-bottom .cart{margin-left:10px;width:92px;background-position:0 -228px}
+#deal-stuff .deal-buy-bottom .cart:hover{background-position:0 -269px}
+#deal-stuff .deal-buy-bottom ul{margin:0 200px 0 70px;text-align:center;color:#999}
+#deal-stuff .deal-buy-bottom ul .num{color:#333}
+#deal-stuff .deal-buy-bottom li{float:left;width:100px}
+#deal-stuff .mainbox{padding:0}
+#deal-stuff h2{font-size:16px}
+#deal-stuff .main .blk{margin:7px 0 30px}
+#deal-stuff .main .detail{width:680px;_overflow:hidden;color:#666}
+#deal-stuff .main .detail img{max-width:702px}
+#deal-stuff .main .blk p{margin:10px 0 15px}
+#deal-stuff .main .detail p{margin:10px 0;font:14px/24px helevetica neue,helvetica,arial,simsun,"宋体",Hiragino Sans GB,sans-serif;color:#666}
+#deal-stuff .main .chart{margin:0 auto}
+#deal-stuff .main .chart th,#deal-stuff .main .chart td{padding:5px;border:1px solid #666;text-align:center}
+#deal-stuff .main .chart th{background:#7a7a7a;color:#fff}
+#deal-stuff .main .chart td{background:#edf8fe}
+#deal-stuff .main .chart td.first{background:#a3dcef}
+#deal-stuff .main .voice{margin-top:105px}
+#deal-stuff .main .voice-title{;height:64px;width:491px;left:-27px;background:url(../images/bg-voice.v7927f211.png) no-repeat;text-indent:-9999px;border:0}
+#deal-stuff .main .voice-share{border:1px solid #89b4d4;background:#eaf6ff;margin-bottom:15px;padding:4px 6px}
+#deal-stuff .main .voice-share li{float:left;font-size:12px}
+#deal-stuff .main .voice-share a{padding:3px 0 3px 20px;margin-right:12px;background:url(../images/icons-share.v186f5c42.gif) 0 -200px no-repeat}
+#deal-stuff .main .voice-share a.qq{background-position:0 -277px}
+#deal-stuff .deal-detail-intro{margin-bottom:30px}
+#deal-stuff .deal-detail-intro h2{margin:0;font-size:16px}
+#deal-stuff .deal-detail-intro ul{margin-top:5px;margin-left:16px}
+#deal-stuff .deal-detail-intro li{list-style-position:outside;list-style-type:disc;line-height:1.6}
+#deal-stuff .main ul.list{margin:10px 0 15px;padding-left:18px}
+#deal-stuff .main ul.list li{list-style-position:outside;list-style-type:disc;margin-bottom:5px}
+#deal-stuff .main ol.list{margin:10px 0 15px;padding-left:18px;*padding-left:23px}
+#deal-stuff .main ol.list li{list-style-position:outside;list-style-type:decimal;margin-bottom:5px}
+#deal-stuff .main dt{font-weight:bold;margin:10px 0 2px}
+#deal-stuff .deal-term dl{margin-top:20px}
+#deal-stuff .deal-term dt{float:left;margin:0;line-height:28px}
+#deal-stuff .deal-term dd{line-height:28px}
+#deal-stuff .deal-term .deal-term__rule{float:none}
+#deal-stuff .deal-term ul{margin-left:18px}
+#deal-stuff .deal-term ul li{list-style:inherit}
+#deal-stuff .banner-deal-detail{margin:0 0 20px}
+#deal-stuff .banner-deal-detail img{display:block}
+#deal-stuff .acronym{font-weight:normal;cursor:help}
+#deal-stuff .acronym sup,#deal-stuff .acronym-box label{display:inline-block;background:#37adb1;color:#FFF;width:12px;height:12px;font-size:10px;text-align:center;line-height:12px;font-weight:400;border-radius:10px;cursor:help}
+#deal-stuff .acronym-box{padding:10px 10px 0;_padding-top:0;font-size:12px;border:1px #efefef solid;background:#f7f7f7;border-radius:3px;margin:20px 0;color:#555}
+#deal-stuff .acronym-box:before{content:'名词解释';;top:-10px;left:8px;background:#f7f7f7;border:1px #efefef solid;padding:0 6px;border-radius:3px;font-weight:bold;color:#000;line-height:1.1}
+#deal-stuff .acronym-box li{padding-left:15px;margin:8px 0;text-shadow:1px 1px 1px #FFF}
+#deal-stuff .acronym-box label{;left:0;_left:-15px;top:4px;*top:0;_top:2px;cursor:text}
+#deal-stuff .acronym sup,#deal-stuff .main .deal-term .acronym-box label{display:inline-block;width:12px;height:12px;font-size:10px;text-align:center;line-height:12px;font-weight:normal;background:#37adb1;color:#FFF;border-radius:10px;cursor:help}#deal-stuff .main .deal-term .acronym-box{left:-16px;margin:20px 0 0;padding:5px 10px;font-size:12px;border:1px #CCC solid;background:#f7f7f7;border-radius:3px;color:#555}#deal-stuff .main .deal-term .acronym-box:before{display:block;content:'名词解释';font-weight:bold;color:#000}
+#deal-stuff .main .deal-term .acronym-box li{list-style:none}
+#deal-stuff .main .deal-term .acronym-box label{cursor:text}
+#deal-stuff .main .content-title{margin:0;padding:20px 0 10px 20px;border-bottom:0px solid #babdc2;color:#333;font-size:18px;font-weight:bold;border-bottom:2px solid #BABDC2}
+#deal-stuff .main .content-title+img{margin-top:10px}
+#deal-stuff .deposit{width:644px;height:108px;padding:4px 13px 10px;margin:0 auto 12px;background:url(../images/bg-deal-deposit.vad640741.png) 0 0 no-repeat}
+#deal-stuff .deposit h3{margin-bottom:10px;font-size:16px;line-height:44px}
+#deal-stuff .deposit h3 em{font-family:arial;margin-right:5px}
+#deal-stuff .deposit h3 .money{font-size:18px;color:#ee5238}
+#deal-stuff .deposit p{font-size:12px}
+#deal-stuff .user-reviews{margin-bottom:6px}
+#deal-stuff .rate-rate-overview{border:1px solid #e7e3e4;box-shadow:1px 1px #f3f1f2}
+#deal-stuff .rate-overview .overview-title{float:left}
+#deal-stuff .rate-overview .overview-head{border-bottom:2px solid #babdc2}
+#deal-stuff .rate-overview .overview-feedback{float:right;font-size:12px}
+#deal-stuff .overview-detail{margin-top:15px}
+#deal-stuff .rate-overview .rating-area{float:left;width:221px;height:115px;padding-top:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;vertical-align:top;zoom:1}
+#deal-stuff .rate-overview .total-group{margin-bottom:10px;text-align:center}
+#deal-stuff .rate-overview .total-score{margin:0;font-size:16px;font-weight:bold}
+#deal-stuff .rate-overview .total-count{margin:0}
+#deal-stuff .rate-overview .total-count strong{color:#ee5238}
+#deal-stuff .rate-overview .average-score{padding:0 3px;font-weight:bold;color:#ee5238;font-size:32px;line-height:40px}
+#deal-stuff .rate-overview .common-rating{margin:0 5px;text-align:left}
+#deal-stuff .rate-overview .score-detail{width:223px;border-left:1px solid #eee}
+#deal-stuff .rate-overview .count-detail{height:113px;padding-top:22px;text-align:center;border-left:1px solid #eee}
+#deal-stuff .rate-overview .count-wrapper{text-align:left}
+#deal-stuff .rate-overview .count-group{margin:0 auto 5px;line-height:1;color:#666;_margin:0}
+#deal-stuff .rate-overview .score-group{height:18px;margin-bottom:6px;padding-top:3px;padding-left:70px;line-height:18px;font-size:12px;color:#666}
+#deal-stuff .rate-overview .score-title{;width:65px;left:5px;top:3px;text-align:right}
+#deal-stuff .rate-overview .delivery-group{padding-left:85px}
+#deal-stuff .rate-overview .delivery-group .score-title{width:80px}
+#deal-stuff .rate-overview .score{color:#999}
+#deal-stuff .rate-overview .percent-box{width:100px;height:12px;margin:0 7px;color:#666;background:#fff3e7;text-align:left;_font-size:0}
+#deal-stuff .rate-overview .percent{height:12px;background:#fc9e58;vertical-align:top}
+#deal-stuff .rate-overview .area-no-reviews{height:60px;line-height:60px;font-size:12px}
+#deal-stuff .rate-overview .poi-level{_height:auto;_margin:25px 10px}
+#deal-stuff .rate-overview .area-few-reviews{width:445px;line-height:100px;text-align:center}
+#deal-stuff .rate-overview .few-reviews-tip{display:inline-block;height:16px;width:16px;line-height:16px;vertical-align:-2px;cursor:default;background:url(../images/sp-deal.v0935a050.png) -94px 0 no-repeat}
+#deal-stuff .user-reviews .my-review{border-top:1px solid #e6e2e3;border-bottom:0;padding:15px 10px;background:#fafafa}
+#deal-stuff .user-reviews .my-review .content{margin-bottom:10px;color:#222;font-size:12px}
+#deal-stuff .user-reviews .my-review .modify{font-size:12px}
+#deal-stuff .user-reviews .my-review .feedback-status{font-size:12px;color:#f76121;margin-top:15px;margin-bottom:5px}
+#deal-stuff .user-reviews .arrow{;top:-1px;right:80px}
+#deal-stuff .user-reviews .arrow .outer,#deal-stuff .user-reviews .arrow .inner{;top:-9px;left:0;border-left:10px dashed transparent;border-right:10px dashed transparent;border-bottom:10px solid #fafafa;width:0;height:0}#deal-stuff .user-reviews .arrow .outer{top:-10px;border-bottom:10px solid #e6e2e3}
+#deal-stuff .user-reviews .rate-filter{background:#f4f4f4;margin:10px 0;padding:0 10px}
+#deal-default #content{width:702px;margin-bottom:30px}
+.top-recommend-deals{padding:16px 10px;margin-bottom:10px;width:958px;border:1px solid #d4d4d4;background:#FFF}
+.top-recommend-deals .city-tip{display:block;margin:-5px 10px 0;padding:10px 30px;border:1px solid #fed286;background:#fff5d5;border-radius:5px;text-decoration:none;text-align:center;color:#000;font-size:14px}.top-recommend-deals .city-tip .xtitle{color:#C33}
+.top-recommend-deals h2{margin:0 10px;padding:4px 0 20px;border-bottom:1px dotted #e5e5e5;line-height:20px;font-size:20px;color:#777}
+.top-recommend-deals--nobrand h2{border-bottom:0;padding:4px 0}
+.top-recommend-deals h2 .tip{color:#ee5239}
+.top-recommend-deals .more-deal{float:right;margin-right:14px}
+.top-recommend-deals .wide-reco-pannel{margin-left:-3px}
+.recommend-brand h3{padding:12px 10px 2px}
+.recommend-brand .brand-list{padding:12px 10px 0}
+.recommend-brand .brand-item{display:inline-block;padding:1px 16px 1px 0;*zoom:1}
+#deal-default #deal-mtsaid,#deal-default #sidebar .sidebox{border:1px solid #d4d4d4}
+#deal-default #sidebar .sidebox{background-color:#FFF}
+#deal-default #sidebar .miaosha4 img{width:238px}
+#deal-default #sidebar .inner-side{border-bottom:0}
+#deal-default #sidebar .dream-realize{padding:0;border:0;width:240px;height:120px;background:url(../images/bg-side-dream.v00e7c96c.png)}
+#deal-default #sidebar .dream-link{display:inline-block;*display:inline;margin-top:40px;width:72px;height:70px;zoom:1}
+#deal-default #sidebar .dream-realize .dream-introduction{margin-left:10px}
+.pg-deal .mt-slider-sheet-container{height:120px}
+#check-failure-dialog .mt-dialog .no-tip{width:290px}
+#check-failure-dialog .mt-dialog .no-tip h5{line-height:50px}
+#deal-verify #content .result-box-wrapper{margin-top:80px}
+.pg-deal-verify .consumer-protection{margin:20px 0}
+.pg-deal-verify .deal-verify--expire .consumer-protection{margin-top:0}
+.pg-deal-verify .deal-verify__image{float:left;width:129px;height:132px;background:url(../images/sp-deal-verify.vb686ee5e.png) 0 0 no-repeat}
+.pg-deal-verify .deal-verify__content{margin-left:139px;display:block}
+.pg-deal-verify .deal-verify__content .consumer-protection{margin-top:0}
+.pg-deal-verify .protect-item{margin-bottom:5px;list-style:outside none;font-size:18px;font-family:'Microsoft Yahei';letter-spacing:2px;color:#333}
+.pg-deal-verify .protect-item__link{color:#333}
+.pg-deal-verify .protect-item__link:hover{text-decoration:none;color:#EF8337}
+.pg-deal-verify .protect-item__emphasis,.pg-deal-verify .protect-item--expiring{color:#f76120}
+.pg-deal-verify .protect-item--xcity{font-size:16px;color:#f76120}
+.pg-deal-verify .inline-link{margin:0 0 0 4px;font-size:14px;line-height:32px;vertical-align:top;zoom:1}
+.pg-deal-biz .address-list{padding:15px;border:1px solid #d4d4d4;background-color:#FFF}
+.pg-deal-biz .address-list li{padding:15px 10px;border-top:1px dotted #dedede}
+.pg-deal-biz .address-list .first{border-top:0}
+.pg-deal-biz .address-list li p{margin-top:5px}
+.pg-deal-biz .address-list li .name{color:#808080}
+.pg-deal-biz .address-list .has-poi-correct a{margin-right:30px}
+.pg-deal-biz .address-list .has-poi-correct .correct-poi{color:#808080}
+.pg-deal-biz .address-list .hover,.pg-deal-biz .address-list li:hover{background:#f9f9f9}
+.pg-deal-biz .address-list li .buy{display:none;float:right;margin-top:40px;width:105px;height:39px;text-indent:-9999px;outline:0;background:url(../images/sp-detail.v9698ccd0.png) no-repeat 0 -83px;_background-image:url(../images/sp-detail.v618d5040.gif)}
+.pg-deal-biz .address-list .hover .buy,.pg-deal-biz .address-list li:hover .buy{display:block}
+.pg-deal-biz .common-rating--biz{width:70px;margin-top:5px;_margin-top:2px}
+.pg-deal-biz .poi-level{color:gray}
+#s-filter{margin-bottom:12px;font-size:12px;border:1px solid #d4d4d4;background:#FFF}
+#s-filter dl{margin:12px 20px 12px 0}
+#s-filter dt{float:left;width:4.4em;margin:4px 0;text-align:right}
+#s-filter dd{margin-left:4em;zoom:1}
+#s-filter dd:after{content:'';display:block;height:0;clear:both}
+#s-filter dd a{display:inline-block;*display:inline;zoom:1;margin:4px 10px 4px 0;padding:0 4px;height:19px}
+#s-filter dd a:hover,#s-filter dd .current{color:#FFF;background-color:#45abab;border-radius:2px;text-decoration:none}
+#s-filter dd a i{color:#999;font-style:normal}
+#s-filter dd a:hover i,#s-filter dd .current i{color:#FFF}
+#s-filter .sub-area{margin-top:8px;margin-bottom:8px;padding:8px 10px;background:#f4f4f4}
+#s-filter .sub-wrapper{padding:2px 0}#s-filter .sub-title{float:left}
+#consult .head{}#consult .blk{margin-top:10px}
+#consult .blk .consult-add-tip{color:#C00;margin-left:10px}
+#consult h3.category{padding:5px 20px;background:#e8f6f9}
+#consult .consult-back{;right:0;top:8px}
+#consult .consult-list{padding:10px 0 50px;width:auto}
+#consult .hasfaq{padding-top:0;border-top:0}
+#consult .consult-list .item{margin:0 0 23px 0;padding:10px 22px 20px;word-wrap:break-word;word-break:break-all}
+#consult .consult-list .alt .item{background:#f6f6f6}
+#consult .consult-list .item a{color:#666}
+#consult .consult-list .item a:hover{color:#666}
+#consult .consult-list .user{font-size:12px;color:#999}
+#consult .consult-list .user strong{float:left;width:300px}
+#consult .consult-list .user span{float:right;width:200px;text-align:right}
+#consult .consult-list .text{clear:both;margin-top:8px}
+#consult .consult-list .reply{margin-top:8px;color:#cb3234}
+#consult .consult-faq{padding:0;border-top:0}
+#consult .consult-faq .item{margin:0;padding-bottom:0}
+#consult .consult-form{padding:25px 0;border:0;width:auto}
+#consult .consult-form .intro{margin:0 0 10px}
+#consult .consult-form .commit{margin-top:10px;width:660px;text-align:right}
+#consult .consult-form .f-textarea{width:650px;margin-top:10px}
+#consult .consult-form .succ{display:none;padding:10px 0}
+#consult .consult-form .error{color:#C00}
+#consult .consult-form .tip{color:#666;font-size:12px}
+#consult .tab-head{}
+#consult .tab-head .filter{margin-bottom:10px;padding:5px 0 10px;border-bottom:1px solid #dfe4e4;z-index:5}
+#consult .tab-head .filter li{float:left;margin:0 5px 0 0;font-size:12px}
+#consult .tab-head .filter a{display:block;padding:1px 3px}
+#consult .tab-head .filter .current a{padding:1px 7px;background:#45abab;color:#fff;border-radius:2px}
+#consult-list .item h6{padding-bottom:5px;font-weight:normal;color:#999}
+#consult-list .item a{color:#EF8337!important}
+#referral-lottery-dialog .body{padding:20px 0 30px;text-align:center}
+#referral-lottery-dialog .body p{margin-top:20px}
+#deal-bottom-list{margin-bottom:10px}
+.prom-deals{padding-bottom:10px;border-bottom:1px dashed #e0e0e0}
+.side-hot-deals .prom-deals{margin-bottom:20px}
+.movie-schedule .deal-detail-bar{margin-bottom:16px;height:40px;background-color:#48c3c8;line-height:40px;text-indent:6px;color:#FFF}
+.movie-schedule .warning{color:#222;font-size:12px;font-weight:normal}
+.movie-schedule .accordion-tab{margin-bottom:10px}
+.movie-schedule .accordion-label i{;right:10px;top:20px;width:10px;height:5px;background:url(../images/sp-triangle-icons.vde5a3195.png) -10px 0 no-repeat}
+.movie-schedule .accordion-tab-selected .accordion-label i{background-position:0 0;top:16px}
+.movie-schedule .accordion-label{*zoom:1;height:40px;background:#f7f7f7;line-height:40px;color:#222;text-indent:6px;cursor:pointer}
+.movie-schedule .accordion-label:hover{background:#ededed;-webkit-transition:background .2s;-moz-transition:background .2s;transition:background .2s}
+.movie-schedule .biz-link{float:right;font-size:12px}
+.movie-schedule .accordion-content{margin-top:10px}
+.movie-schedule .date-tabs{border-bottom:1px solid #eaeaea;font-size:12px;line-height:23px;color:#666}
+.movie-schedule .date-label{float:left;margin-right:-1px;padding:0 6px;width:78px;border:1px solid #eaeaea;border-bottom:0;background:#f9f9f9;text-align:center;cursor:pointer}
+.movie-schedule .date-label:hover{background:#e6e6e6}
+.movie-schedule .date-tabs .current{background:#ededed}
+.movie-schedule .movie{padding:20px 0;border-top:1px dotted #CCC}
+.movie-schedule .movie-info .first{border-top:0}
+.movie-schedule .no-movie-info{margin:auto auto;padding:30px 0 30px 44px;width:157px;font-size:20px;color:#222}
+.movie-schedule .no-movie-info i{;left:0;width:34px;height:35px;background:url(../images/sys-icons-48-new.vef6d2bc0.png) -7px -37px no-repeat}
+.movie-schedule .movie-poster{float:left;margin-left:6px}
+.movie-detail{margin-left:160px;_zoom:1}
+.movie-detail__title .name{font-weight:normal;display:inline;font-size:14px}
+.movie-detail__title .rate{margin:0 6px;vertical-align:1px}
+.movie-detail__title .rate-stars{*vertical-align:top}
+.movie-detail__title .score{font-size:16px;color:#F60;font-weight:bold}
+.movie-detail__title .source{font-size:12px;color:#999}
+.movie-detail__info{font-size:12px;color:#666;line-height:2em;margin:8px 0 14px}
+.movie-detail__schedule{margin-top:10px;line-height:14px;color:#666}
+.movie-detail__schedule .time{display:inline-block;*display:inline;*zoom:1;margin:6px 10px 6px 0;padding-right:10px;border-right:1px solid #eaeaea;font-weight:bold;text-align:center}
+.movie-detail__schedule .past{color:#999;font-weight:normal}
+#cart-result-deals-dialog .result-wrapper{padding:0 0 15px}
+#cart-result-deals-dialog .result-box{float:left}
+#cart-result-deals-dialog .operate{float:right;margin:23px 0}
+#cart-result-deals-dialog .operate .btn-cart{margin-right:10px}
+#cart-result-deals-dialog .deal-list{border-top:1px dotted #dbdbdb}
+#cart-result-deals-dialog .recommend-deals{padding:16px 0;border:0;width:auto}
+#cart-result-deals-dialog .recommend-deals h3{margin-left:0;color:#666;font-weight:normal;font-size:12px}
+.recommend-deals h3{font-size:14px;margin-left:10px}
+.recommend-deals .deal{color:666;float:left;padding:10px 10px 0}
+#cart-result-deals-dialog .deal{padding:10px 24px 0 0}
+#cart-result-deals-dialog .last{padding-right:0}
+.pg-deal .calendar-table{background-color:#FFF}
+.pg-deal .calendar-controls{margin-bottom:15px}
+.pg-deal .room-status{margin:0 0 20px;padding:26px 15px;border:1px solid #f3f3f3}
+.pg-deal #deal-stuff .room-status__header{padding-bottom:5px;margin:25px 0 0 0}
+.pg-deal .room-status__header--tip{color:#f66020;vertical-align:top;line-height:23px;padding-left:6px}
+.pg-deal #content .room-status__header--rate,.pg-deal #content .room-status__header--modtime{float:right;font-size:12px;color:#666;line-height:23px}
+.pg-deal #content .room-status__header--rate{margin-right:20px}
+.pg-deal .room-status__hints{margin-top:16px;color:#666;font-size:12px}
+.pg-deal .calendar-table__cell{font-size:12px;width:75px;height:39px;border:1px solid #f3f3f3;text-align:center;font-weight:bold;color:#666;background:#FFF}
+.pg-deal .calendar-table__cell--header{height:55px;font-weight:normal;font-size:12px}
+.pg-deal .calendar-table__cell--today{margin:10px 20px;line-height:24px;color:#FFF;background-color:#666;border-radius:3px;-webkit-border-radius:3px;-o-border-radius:3px;-moz-border-radius:3px}
+.pg-deal .calendar-table__cell--left{font-weight:bold;width:91px;border:1px solid #f3f3f3;background-color:#fafafa}
+.pg-deal .calendar-table__cell--room-type{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:39px;width:85px;padding:0 3px}
+.pg-deal .calendar-table__cell--available{background-color:#fef7e2;border-color:#f0eadc}
+.pg-deal .calendar-table__cell--unavailable{color:#CCC}
+.pg-deal .hotel-calendar-table td:first-child+td{box-shadow:-1px 1px 2px rgba(222,222,222,0.6)}
+.pg-deal .calendar-control--display{width:150px}
+.pg-deal .poi-selector{text-align:center;background:#fbfbfb;padding:15px 0;border-bottom:solid 1px #f3f3f3}
+.pg-deal .poi-list{padding:10px 20px 0}.pg-deal .poi-list__item .title-wrapper{padding:6px 0}
+.pg-deal .poi-list__item .title-wrapper .item{display:inline-block;vertical-align:middle;*display:inline;*zoom:1}
+.pg-deal .poi-list__item .title-wrapper__arrow{height:12px;width:12px;background:url(../images/sp-common.v60632a81.png) no-repeat 0 -65px}
+.pg-deal .poi-list__item .title-wrapper__title{cursor:pointer}
+.pg-deal .poi-list__item .title-wrapper__controls{float:right;font-size:12px;display:none}
+.pg-deal .poi-list__item .title-wrapper__controls a{padding-left:10px}
+.pg-deal .poi-list .hotel-calendar-table{margin:4px 0;width:646px;display:none}
+.pg-deal .poi-list__item--open .hotel-calendar-table,.pg-deal .poi-list__item--open .title-wrapper__controls{display:block}
+.pg-deal .online-book-container .room-status{padding:0}
+.pg-deal .online-book-container .room-status__hints{padding:0 20px 20px;margin-top:16px}
+.pg-deal .room-status .page-nav-wrapper{padding-top:10px;text-align:center;border-top:solid 1px #f3f3f3;margin:15px 20px}
+.pg-deal .room-status .page-nav-wrapper a{padding:0;width:18px;height:18px;text-align:center;line-height:18px}
+.movie-tab{margin-bottom:10px;border-bottom:3px solid #DDD}
+.movie-tab__item{float:left;margin:0 15px -3px 0}
+.movie-tab__item__link{display:block;padding:8px 0 5px;border-bottom:3px solid #DDD;width:60px;text-align:center;color:#000}
+.movie-tab__item__link--extra{width:76px}
+.movie-tab__item__link:hover,.movie-tab__item--current .movie-tab__item__link{border-bottom-color:#2eb6aa;text-decoration:none;color:#EF8337}
+.movie-tab__item .icon-new{top:-2px;right:-5px}
+.deal-content .switch{;top:0;width:27px;height:52px;background:url(../images/sp-deal.v0935a050.png) 0 0 no-repeat}
+.deal-content .switch--disabled:hover{cursor:not-allowed}
+.deal-content .switch--left{left:171px;background-position:0 -44px}
+.deal-content .switch-left:hover{background-position:-56px -44px}
+.deal-content .switch--right{right:-27px;background-position:-28px -44px}
+.deal-content .switch--right:hover{background-position:-84px -44px}
+.combo-table{table-layout:fixed;width:100%;border:1px solid #e8e8e8;border-collapse:collapse;border-spacing:0;font-size:12px;color:#666;text-align:center;background-color:#FFF}
+.combo-table--list{margin-bottom:20px}
+.combo-table--list th{white-space:nowrap}
+.combo-table--list .uix-tooltip:hover{background-color:#e8f4f4}
+.combo-table--detail{border-bottom:0;overflow:hidden;transition:.2s ease-in;zoom:1}
+.combo-table--box{margin:20px 0}
+.combo-table th{border:1px solid #e8e8e8;height:40px;overflow:hidden;padding:5px 10px;line-height:1.2;color:#333;font-size:14px;font-weight:bold;background-color:#f4f4f4;text-align:center}
+.combo-table td{border:1px dotted #e8e8e8;padding:5px 10px;line-height:22px;color:#666;word-break:break-all;word-wrap:break-word;background:#fbfbfb}
+.combo-table .title{font-weight:bold;color:#666}
+.combo-table .hd-info{white-space:nowrap;font-weight:normal}
+.combo-list{margin-top:10px}
+.combo-list .combo-text{color:#999}
+.combo-list .combo-own{display:inline-block;*display:inline;zoom:1;margin-left:5px;vertical-align:middle}
+.combo-list .combo-desc{display:inline-block;*display:inline;zoom:1;line-height:18px;vertical-align:middle}
+.combo-detail-wrapper{border-bottom:1px solid #e8e8e8}
+.combo-detail-wrapper--nofirst .combo-table--detail{height:0}
+.combo-detail-wrapper h3{padding:7px 10px;color:#333;border:1px solid #e8e8e8;border-bottom:0;font-size:14px;font-weight:bold;zoom:1}
+.combo-detail-wrapper .combo{display:inline-block;*display:inline;width:15px;margin-right:8px;padding-top:1px;vertical-align:1px;line-height:15px;color:#FFF;font-family:Helvetica;background:#CCC;font-style:normal;font-size:12px;font-weight:normal;text-align:center;zoom:1}
+.combo-detail-wrapper .combo--A{background:#e54113}
+.combo-detail-wrapper .combo--B{background:#fa7a2d}
+.combo-detail-wrapper .combo--C{background:#39ab36}
+.combo-detail-wrapper .combo--D{background:#00a7ae}
+.combo-detail-wrapper h3:hover{cursor:pointer}
+.combo-detail-wrapper--nofirst h3{border-top:0}
+.combo-detail-wrapper .combo-status{;right:10px;top:12px;width:20px;height:11px;background:url(../images/sp-deal.v0935a050.png) -112px -71px no-repeat;zoom:1;overflow:hidden;transition:.2s ease-in}
+.combo-detail-wrapper .combo-status--down{-webkit-transform:rotate(180deg);transform:rotate(180deg);background-position:-112px -60px\9}
+.combo-remark{margin-bottom:20px}
+.combo-remark .item{float:left;margin-right:20px;padding-top:1px;font-weight:normal;font-size:12px;line-height:15px}
+.deal-combo__tip .title{font-weight:bold}
+.deal-combo__tip em{font-weight:bold;color:#f76120}
+.combo-tip{margin-top:10px;border:1px solid #d3d3d3;padding:7px 10px;color:#666}
+.combo-tip__title{margin-bottom:5px}
+.baidu-bar .xtitle{color:#C33}
+.deal-bottom-recommend .recommend-deals{margin-top:10px}
+#deal-default #sidebar .sidebox, .recommend-skin{border:1px solid #eee}
+.recommend-deals{font-size:12px;line-height:21px;padding:16px 10px;width:600px}
+
+.share--sina-new:hover{text-decoration:none}
+.icon-share--sina-new{color:#f76120;width:68px;height:21px;line-height:21px;padding-left:35px;margin-top:-3px;font-style:normal;text-indent:0;background-position:0 -41px}
+.contact_service--btn{margin-right:10px;padding:2px 10px 4px 30px;line-height:20px;color:#fff;text-decoration:none;font-size:12px;background:url(../images/icon-online-service.vd53cbd23.gif) no-repeat}
+.deal-firstscreen-sprite,.deal-component-left .wedding-guarantee,.deal-component-price .deal-component-price-pricetag,.deal-component-commitments .anytime-money-back,.deal-component-commitments .not-anytime-money-back,.deal-component-commitments .expiring-money-back,.deal-component-commitments .not-expiring-money-back,.deal-component-commitments .instant-money-back,.deal-component-commitments .real-comment,.deal-component-commitments .anti-counterfeit,.deal-component-commitments .ten-day-money-back,.deal-component-commitments .not-ten-day-money-back,.deal-component-scheme .deal-detail-scheme-item i,.deal-component-purchase-button .basic-deal,.deal-component-purchase-button .lottery-deal,.deal-component-purchase-button .mobile-only-download,.deal-component-purchase-button .miaosha-not-started,.deal-component-purchase-button .mini-cart-add,.deal-component-purchase-button .mini-cart-lottery-result,.deal-component-purchase-button .mini-cart-lottery-end,.deal-component-purchase-button .deal-component-add-favorite,.deal-component-purchase-button .in-favorite,.deal-component-purchase-button .share-tip,.deal-component-remaining-time-text i.countdown,.deal-component-availability .deal-component-soldout-notice,.deal-component-availability .deal-component-availability-link{background:url("../images/screen.png") no-repeat}
+
+.deal-component-container{background:#fff;font-size:12px;width:938px;border:1px solid #eee;padding:20px 20px 15px 20px;margin:0 0 16px}
+
+.deal-component-container .hidden{display:none}
+.deal-component-container a{text-decoration:none;cursor:pointer;color:#666}
+.deal-component-container a:hover{color:#EF8337}
+.deal-component-container a.look-normal:hover{color:#666}
+.deal-component-container .sans-serif{font-family:Helvetica Neue,Helvetica,Arial,Hiragino Sans GB,Microsoft Yahei,Simhei,sans-serif}
+.deal-component-container .orange{color:#ff8900}
+.deal-component-container h2.orange{color:#f76120}
+.deal-component-container .divider{padding-bottom:10px;margin-bottom:10px;border-bottom:1px dotted #ddd}
+.deal-component-container .left{float:left}
+.deal-component-container .deal-component-headline{margin-bottom:10px;padding-bottom:14px}
+.deal-component-container .contact_service--btn,.deal-component-container .contact_service--btn:hover{color:#fff}
+.deal-component-title,.deal-component-title-prefix{font-size:28px;color:#333;padding:0;margin:0;margin-bottom:15px}
+.deal-component-title{display:inline}.deal-component-title-prefix{font-weight:bold;}
+.deal-component-description{font-size:16px;line-height:24px;color:#666}
+.deal-component-images .deal-mark{margin-top:-3px;margin-left:10px}
+.deal-component-left{float:left;margin-top:10px;margin-right:30px;*margin-right:20px}
+.deal-component-left .wedding-guarantee{width:460px;height:54px;margin-top:10px;background-position:0 0}
+.deal-component-container .candidates{margin:10px 0;*overflow:hidden}
+.deal-component-container .candidates img{margin-left:6px;cursor:pointer;border:1px solid #eee;padding:2px}
+.deal-component-container .candidates img.first-image{margin-left:0}
+.deal-component-container .candidates img.active,.deal-component-container .candidates img:hover{border:3px solid #ff8900;padding:0}
+.deal-component-info{float:left;width:448px;color:#666}
+.deal-component-info span{line-height:30px}
+.deal-component-info .item{margin-right:10px;}
+.deal-component-info .vertical-divider{padding-right:10px;border-right:1px solid #d2d2d2}
+.deal-component-rating span{*display:inline;*zoom:1}
+.deal-component-rating .common-rating{vertical-align:middle;margin-top:-5px;*margin-top:0}
+.deal-component-rating .orange{font-weight:bold}
+.deal-component-rating .few-ratings{border-radius:6px;padding:0 4px;margin:0 0 0 6px;background:#ddd}
+.deal-component-price{margin-bottom:0;line-height:1.3}
+.deal-component-price .deal-component-price-current{display:inline;font-size:32px;font-weight:normal}
+.deal-component-price .deal-component-price-current strong{font-size:34px}
+.deal-component-price .deal-component-price-pricetag{color:white;width:52px;text-align:center;text-indent:-8px;line-height:16px;*line-height:15px;height:16px;display:inline-block;background-position:0 -1458px}.deal-component-detail-leading{width:65px;display:inline-block}
+.deal-component-expiry .deal-component-detail-leading{vertical-align:top}
+.deal-component-expiry .orange{margin-left:6px}
+.deal-component-detail-leading .deal-component-detail-leading{vertical-align:top}
+.deal-component-inline-text-container{width:382px;display:inline-block;*display:inline;*zoom:1}
+.deal-component-container .deal-component-inline-text-wrapper{vertical-align:bottom;display:inline;line-height:18px;padding-right:10px;text-overflow:ellipsis;overflow:hidden}
+.deal-component-inline-text-toggler{vertical-align:bottom;width:55px;overflow:hidden;color:#EF8337;cursor:pointer}
+.deal-component-inline-text-folded .deal-component-inline-text-wrapper{white-space:nowrap;display:inline-block;padding-right:0;width:317px}
+.deal-component-inline-text-folded .deal-component-inline-text-toggler{float:right;*margin-top:-30px}
+.deal-component-commitments a{display:inline-block;line-height:22px;padding-left:25px;color:#666}
+.deal-component-commitments .anytime-money-back{background-position:0 -765px}
+.deal-component-commitments .not-anytime-money-back{background-position:0 -1338px}
+.deal-component-commitments .expiring-money-back{background-position:0 -1213px}
+.deal-component-commitments .not-expiring-money-back{background-position:0 -1363px}
+.deal-component-commitments .instant-money-back{background-position:0 -1313px}
+.deal-component-commitments .real-comment{background-position:0 -1263px}
+.deal-component-commitments .real-comment:hover{color:#666;cursor:default}
+.deal-component-commitments .anti-counterfeit{background-position:0 -1288px}
+.deal-component-commitments .ten-day-money-back{background-position:0 -715px}
+.deal-component-commitments .not-ten-day-money-back{background-position:0 -740px}
+.deal-component-scheme{padding-top:10px}
+.deal-component-scheme .deal-component-detail-leading{float:left}
+.deal-component-scheme .deal-component-detail-scheme{width:383px;float:left}
+.deal-component-scheme .deal-detail-scheme-item{display:inline-block;width:auto;line-height:27px;margin:0 5px 10px 0;padding-left:8px;padding-right:8px;color:#666;border:1px solid #d2d2d2;text-decoration:none}
+.deal-component-scheme .deal-detail-scheme-item:hover{color:#666}
+.deal-component-scheme .deal-detail-scheme-item i{;padding:0;margin:0;font-size:0;width:10px;height:10px;bottom:0;right:0;background-position:0 -1477px}
+.deal-component-scheme .deal-detail-scheme-item--current,.deal-component-scheme .deal-detail-scheme-item:hover{box-shadow:0 0 0 1px #ff8900;border:1px solid #ff8900;text-decoration:none}
+.deal-component-quantity{margin-bottom:20px;margin-top:15px}
+.deal-component-quantity .J-cart-quantity{vertical-align:middle;text-align:center;font-size:12px;height:25px;line-height:25px;-webkit-appearance:none;outline:0;width:40px;border:0;border-top:1px solid #ddd;border-bottom:1px solid #ddd;padding:0;margin:0}
+
+.deal-component-quantity button{display:inline-block;*display:inline;*zoom:1;vertical-align:middle;text-align:center;outline:0;height:27px;border:1px solid #ddd;font-size:18px;padding:0 6px;margin:0;color:#000;background:#F0F0F0;cursor:pointer}
+
+.deal-component-quantity button:hover{color:#333;background:#e0e0e0}
+.deal-component-quantity .deal-component-quantity-left{margin-right:10px}
+.deal-component-purchase-button{line-height:38px}
+.deal-component-purchase-button .mini-cart-buy{vertical-align:top;color:#fff;font-size:0;width:156px;height:44px;border:0;margin-top:0;margin-bottom:0;margin-left:0;margin-right:6px;padding:0;cursor:pointer}
+.deal-component-purchase-button .basic-deal{background-position:0 -574px}
+.deal-component-purchase-button .basic-deal:hover,.deal-component-purchase-button .basic-deal.buy_hover,.deal-component-purchase-button .basic-deal.buy-hover{background-position:0 -527px}
+.deal-component-purchase-button .basic-deal:active,.deal-component-purchase-button .basic-deal.buy_active,.deal-component-purchase-button .basic-deal.buy-active{background-position:0 -480px}
+.deal-component-purchase-button .lottery-deal{background-position:0 -339px}
+.deal-component-purchase-button .lottery-deal:hover,.deal-component-purchase-button .lottery-deal.lottery_hover,.deal-component-purchase-button .lottery-deal.lottery-hover{background-position:0 -433px}
+.deal-component-purchase-button .lottery-deal:active,.deal-component-purchase-button .lottery-deal.lottery_active,.deal-component-purchase-button .lottery-deal.lottery-active{background-position:0 -386px}
+.deal-component-purchase-button .mobile-only-download{width:320px;background-position:0 -104px}
+.deal-component-purchase-button .mobile-only-download:hover,.deal-component-purchase-button .mobile-only-download.mobile-only-download_hover,.deal-component-purchase-button .mobile-only-download.mobile-only-download-hover{background-position:0 -57px}
+
+.deal-component-purchase-button .mobile-only-download:active,.deal-component-purchase-button .mobile-only-download.mobile-only-download_active,.deal-component-purchase-button .mobile-only-download.mobile-only-download-active{background-position:0 -151px}
+
+.deal-component-purchase-button .miaosha-not-started{width:185px;background-position:0 -668px}
+.deal-component-purchase-button .mini-cart-button{display:inline-block;text-indent:120px;overflow:hidden;width:120px;height:44px;line-height:44px;background-color:#fff;margin-right:16px}
+.deal-component-purchase-button .deal-wedding{font-size:16px;font-family:'arial, sans-serif'}
+.deal-component-purchase-button .mini-cart-add{background-position:0 -790px}
+.deal-component-purchase-button .mini-cart-add:hover,.deal-component-purchase-button .mini-cart-add.cart_hover,.deal-component-purchase-button .mini-cart-add.cart-hover{background-position:0 -884px}
+
+.deal-component-purchase-button .mini-cart-add:active,.deal-component-purchase-button .mini-cart-add.cart_active,.deal-component-purchase-button .mini-cart-add.cart-active{background-position:0 -837px}
+.deal-component-purchase-button .mini-cart-lottery-result{background-position:0 -1072px}
+.deal-component-purchase-button .mini-cart-lottery-result:hover,.deal-component-purchase-button .mini-cart-lottery-result.lottery-result_hover,.deal-component-purchase-button .mini-cart-lottery-result.lottery-result-hover{background-position:0 -1166px}
+.deal-component-purchase-button .mini-cart-lottery-result:active,.deal-component-purchase-button .mini-cart-lottery-result.lottery-result_active,.deal-component-purchase-button .mini-cart-lottery-result.lottery-result-active{background-position:0 -1119px}
+
+.deal-component-purchase-button .mini-cart-lottery-end{width:170px;text-indent:170px;background-position:0 -931px}
+.deal-component-purchase-button .mini-cart-lottery-end:active,.deal-component-purchase-button .mini-cart-lottery-end.lottery-end_active,.deal-component-purchase-button .mini-cart-lottery-end.lottery-end-active{background-position:0 -1025px}
+
+.deal-component-purchase-button input[type="submit"]::-moz-focus-inner{border:0;padding:0}
+.deal-component-purchase-button a{vertical-align:bottom;color:#666;line-height:40px}
+.deal-component-purchase-button .small-btn{display:inline-block;*display:inline;*zoom:1;height:13px;line-height:14px;padding-left:16px;margin-top:16px;vertical-align:top}
+.deal-component-purchase-button .deal-component-add-favorite,.deal-component-purchase-button .in-favorite{background-position:0 -1413px}
+.deal-component-purchase-button .share-tip{background-position:0 -1444px;cursor:pointer}
+.deal-component-remaining-time-text i.countdown{display:inline-block;*display:inline;*zoom:1;width:16px;height:16px;vertical-align:middle;background-position:0 -1429px}
+.deal-component-remaining-time-text .orange{display:inline-block;line-height:16px;*height:16px;text-align:center}
+
+.deal-component-container .deal-component-lottery-info{margin-bottom:20px}
+.deal-component-delivery-schemes{margin-bottom:20px}
+#deal-component-share-dialog{margin-top:10px}
+#deal-component-share-dialog .deal-share{margin-top:10px;padding:0 10px 3px}
+#deal-component-share-dialog .deal-share .share-tip{display:none}
+#deal-component-share-dialog .deal-share a{float:left;clear:left;color:#666;line-height:16px;height:24px;text-decoration:none}
+#deal-component-share-dialog .deal-share a .icon-share{float:left}
+#deal-component-share-dialog .deal-share a li{margin-bottom:7px}
+#deal-component-share-dialog .deal-share a span{margin-left:10px;font-size:12px}
+#deal-component-share-dialog .deal-share a .deal--v2-share--sina{display:none}
+#deal-component-share-dialog .icon-share--sina-new{font-size:12px;margin-left:-2px}
+.deal-share-qq-input{margin-top:10px;width:280px}
+.table-layout-fixed{table-layout:fixed}
+.standard-bar{padding:3px 6px;color:#fff;border-radius:3px;font-weight:bold;background-color:#37adb1}
+.standard-content-title{margin:10px 0 15px}
+.standard-center{text-align:center}
+.standard-list-title{margin:5px 0}
+.standard-image,.standard-img{display:block;margin:10px 0}
+.standard-image-wrap{display:block;width:100%}
+.block-image{display:block}
+#deal-stuff .main ul.list li.deal-detail-marginless{list-style-type:none;margin-left:-15px}
+.deal-detail-grey-text{color:grey}
+.deal-detail-text-align-left{text-align:left}
+.deal-detail-cake-style1{font-size:24px;color:#198488;font-weight:bold}
+.deal-detail-cake-style2{font-size:12px}
+.deal-detail-cake-style3{font-size:14px;font-weight:bold}
+.deal-detail-cake-table{width:100%;border:1px solid #fff}
+.deal-detail-cake-table__divider-cell{background:#198488;height:3px}
+.deal-detail-cake-table__half-width{width:50%}
+.deal-detail-cake-table__25-height{height:25px}
+.ktv-table{width:640px;border:0;border-collapse:collapse;border-spacing:1px;font-size:14px;font-family:宋体;color:#222}
+.ktv-table td{background:#FFF;border:1px solid #e8e8e8;padding:4px;vertical-align:top;text-align:center;word-break:break-all;word-wrap:break-word}
+.ktv-table th{box-sizing:border-box;text-align:center;border:1px solid #e8e8e8;padding:4px 0;background:#f0f0f0;color:#222;font-weight:bold}
+.deal-menu{width:100%;margin-top:5px;border:1px solid #e8e8e8;font-size:14px;color:#222}
+.deal-menu .name{text-align:left}
+.deal-menu .price{text-align:center}
+.deal-menu .amount{text-align:center}
+.deal-menu .subtotal{text-align:right}
+.deal-menu caption,.deal-menu th,.deal-menu td{padding:8px 10px;background:#FFF;border:1px solid #e8e8e8;border-top:0;word-break:break-all;word-wrap:break-word}
+.deal-menu caption{background:#f0f0f0}
+.deal-menu caption .title{font-weight:bold}
+.deal-menu th{background:#f0f0f0;font-weight:bold}
+.deal-menu td{border-left-style:dotted;border-right-style:dotted;border-bottom-style:dotted}
+.deal-menu .subline{background:#fbfbfb;font-weight:bold;text-align:center}
+.deal-menu-summary{padding:2px 10px;text-align:right}
+.deal-menu-summary .worth{display:inline-block;min-width:50px;_width:50px;word-break:normal;word-wrap:normal}
+.deal-menu-summary .price{color:#ea4f01}
+.serif{font-family:simsun,"宋体",helevetica neue,helvetica,arial,sans-serif}
+.pg-deal-detail .bg-for-new-index{background:white}
+.pg-deal-detail #content .mainbox{border:0}
+#content .mainbox{min-height:400px;padding:0 20px 20px 20px;background:#fff;clear:both}
+#deal-stuff .standard-content{padding-left:0;padding-right:0}
+
+#deal-default .deal-term{margin-bottom:10px}
+.pg-deal-detail .side-extension{border:1px solid #eee!important;box-shadow:none}
+.site-sidebar{float:right;width:240px;_display:inline}
+.side-extension--multiple{padding:0 20px 1px}
+.side-extension--link .side-extension__item{margin:0;padding:40px 0 20px 40px;background-image:url(../images/sp-sidebar.vf6dbce11.png);background-repeat:no-repeat;color:#666}
+.side-extension--link .side-extension__item:hover{text-decoration:none;color:#EF8337}
+
+.stick-qrcode{position:fixed;margin-left:500px;z-index:40}
+.stick-qrcode .stick-qrcode__pos{;top:128px;left:17px;width:74px;height:74px}
+.stick-qrcode .index-xiaomei{display:inline-block;width:114px;height:255px;vertical-align:top;outline:0;background-position:0 -1040px}
+.stick-qrcode .index-xiaomei .close{;top:110px;right:6px;width:20px;height:20px}
+.stick-qrcode .stick-qrcode-category{background-position:0 -367px}
+.stick-qrcode .stick-qrcode-deal{background-position:0 -443px}
+
+.rate-filter{font-size:12px}
+.rate-filter a{text-decoration:none}
+.rate-filter .last{float:right;padding:7px 0;_display:inline}
+.rate-filter .last input{vertical-align:middle}
+.rate-filter .last .withcontent-label{padding-right:10px}
+.rate-filter .last .sort-default,.rate-filter .last .sort-time{padding:0 10px;border-left:1px solid #e1e1e1;color:#222}
+.rate-filter .last .sort-time{padding-right:0}
+.rate-filter .last .selected-sort{color:#999;font-weight:bold;cursor:default}
+.rate-filter .last .sort-icon{display:inline-block;zoom:1;width:10px;height:10px;background:url(../images/sp-header-new.vefe0f047.png) -95px -77px no-repeat}
+.rate-filter .first{float:left;padding:7px 0 7px 0;margin-right:15px}
+.rate-labels-wrapper{margin:20px 0}
+.rate-labels-wrapper .title{float:left;font-size:12px;line-height:26px}
+.rate-labels-wrapper .labels{zoom:1;overflow:hidden}
+
+.rate-label{display:inline-block;zoom:1;margin-left:5px;margin-bottom:5px;border:solid 2px #ececec;padding:0 5px;color:#333;font-size:12px;line-height:22px;text-align:center;}
+.rate-label:hover{border-color:#a7a7a7;text-decoration:none}
+.rate-label:active,.rate-label--active{border-color:#a7a7a7;color:#FFF;background:#a7a7a7}
+.rate-label--positive{border-color:#fff3e8;color:#fa5d2f;background:#fff3e8}
+.rate-label--positive:hover{border-color:#ff8900}
+.rate-label--positive:active,.rate-label--positive--active{border-color:#ff8900;color:#FFF;background:#ff8900}
+
+.rate-list__item{border-bottom:1px dotted #dbdbdb;padding:20px 10px 10px;color:#222;font-size:12px}
+.rate-list__item strong{color:#f76120}.rate-list__item p{margin:10px 0}
+.rate-list__item .info{margin-bottom:10px;color:#999;line-height:18px}
+.rate-list__item .info .user-info{float:left}
+.rate-list__item .info .time{color:#999;margin-left:10px;font-size:10px}
+.rate-list__item .info .common-rating{vertical-align:top;margin:3px 0}
+.rate-list__item .info .rate-status{float:right;font-style:normal}
+.rate-list__item .info .rate-status .status{margin-left:20px;color:#C00}
+.rate-list__item .shopname,.rate-list__item .deal-title a{color:#999}
+.rate-list__item .biz-reply{margin:15px 0 0;color:#c6895a}
+.rate-list__item .content{margin-bottom:10px;word-break:break-all}
+.rate-list__item .content em{background:#fff7a1}
+.rate-list__item .btn-useful{margin:0 5px 0 0;border-color:#dbdbdb;color:#222;background:#fff;background-image:-moz-linear-gradient(top,#fff,#f6f6f6);background-image:-o-linear-gradient(top,#fff,#f6f6f6);background-image:linear-gradient(top,#fff,#f6f6f6)}
+.rate-list__item .btn-useful:hover{background:#dcdcdc;background-image:-moz-linear-gradient(top,#f5f5f5,#dcdcdc);background-image:-o-linear-gradient(top,#f5f5f5,#dcdcdc);background-image:linear-gradient(top,#f5f5f5,#dcdcdc)}
+.rate-list__item .btn-useful .number{color:#999}
+.pic-list{margin-top:15px}
+.pic-list .pic-thumbnails{width:665px;height:100px;overflow:hidden}
+.pic-thumbnails .pic-thumbnail-list li{float:left;margin-right:13px}
+.pic-thumbnail{display:inline-block;zoom:1;*display:inline;width:100px;height:100px;background:url(../images/icon-loading16x16.vecf78228.gif) no-repeat center;overflow:hidden}
+.pic-thumbnail img{min-height:100px;min-width:100px;_height:100px;_width:100px}
+.current .pic-thumbnail,.pic-thumbnail:hover{border:solid 2px #ff8528;width:96px;height:96px}
+.current .pic-thumbnail img,.pic-thumbnail:hover img{top:-2px;left:-2px}
+.pic-preview{margin-top:10px}
+
+.common-rating{background-position:0 -17px;width:60px}
+.common-rating, .common-rating .rate-stars{background-position:0 0;display:inline-block;height:12px;vertical-align:top;background:url(../images/index.png) repeat-x;overflow:hidden}
+#deal-default .deal-term dl{background:#F9F9F9;border-bottom:1px solid #EEEEEE;margin-top:0}
+#deal-default .deal-term dt{color:666;width:140px}
+#deal-default .deal-term dt, #deal-default .deal-term dd{background:fff;border-top:1px solid #eee;line-height:24px;padding:8px 10px;text-align:left;white-space:pre-wrap;word-break:break-all;}
+#deal-default .deal-term dd{background:#fff;border-left:1px solid #eee;margin-left:160px}
+
+/* 分享到 */
+#mt-simpledialog-container{left:0;position:absolute;top:0;z-index:9;}
+.mt-simpledialog{background:#fff;border:2px solid #e2e2e2;position:absolute;height:160px}
+.icon-share{display:block;width:16px;height:16px;background:url("../images/share-new.png") no-repeat 0 0;text-indent:-9999px;outline:0;overflow:hidden}
+.icon-share--sina{background-position:-16px 0}
+.icon-share--qq{background-position:-32px 0}
+.icon-share--renren{background-position:-48px 0}
+.icon-share--douban{background-position:-64px 0}
+.icon-share--qzone{background-position:-80px 0}
